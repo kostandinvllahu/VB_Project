@@ -47,6 +47,7 @@ Partial Class Room
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Guna2ImageButton1 = New Guna.UI2.WinForms.Guna2ImageButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -166,7 +167,7 @@ Partial Class Room
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(650, 13)
+        Me.Label5.Location = New System.Drawing.Point(631, 13)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(59, 25)
         Me.Label5.TabIndex = 12
@@ -220,12 +221,12 @@ Partial Class Room
         '
         Me.TextBox7.Location = New System.Drawing.Point(310, 107)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(341, 20)
+        Me.TextBox7.Size = New System.Drawing.Size(286, 20)
         Me.TextBox7.TabIndex = 17
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(657, 105)
+        Me.Button7.Location = New System.Drawing.Point(602, 105)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(121, 22)
         Me.Button7.TabIndex = 18
@@ -246,7 +247,7 @@ Partial Class Room
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(422, 19)
+        Me.Label6.Location = New System.Drawing.Point(367, 17)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(174, 19)
         Me.Label6.TabIndex = 20
@@ -269,11 +270,27 @@ Partial Class Room
         Me.Button5.Text = "Delete"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Guna2ImageButton1
+        '
+        Me.Guna2ImageButton1.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton1.CheckedState.Parent = Me.Guna2ImageButton1
+        Me.Guna2ImageButton1.HoverState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton1.HoverState.Parent = Me.Guna2ImageButton1
+        Me.Guna2ImageButton1.Image = Global.Restaurant.My.Resources.Resources.refresh
+        Me.Guna2ImageButton1.ImageRotate = 0!
+        Me.Guna2ImageButton1.Location = New System.Drawing.Point(729, 71)
+        Me.Guna2ImageButton1.Name = "Guna2ImageButton1"
+        Me.Guna2ImageButton1.PressedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton1.PressedState.Parent = Me.Guna2ImageButton1
+        Me.Guna2ImageButton1.Size = New System.Drawing.Size(58, 58)
+        Me.Guna2ImageButton1.TabIndex = 23
+        '
         'Room
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(886, 641)
+        Me.Controls.Add(Me.Guna2ImageButton1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label6)
@@ -330,4 +347,5 @@ Partial Class Room
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Button5 As Button
+    Friend WithEvents Guna2ImageButton1 As Guna.UI2.WinForms.Guna2ImageButton
 End Class

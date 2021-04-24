@@ -179,5 +179,8 @@
   <ItemGroup>
     <None Include="Resources\logout_icon_151219.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
