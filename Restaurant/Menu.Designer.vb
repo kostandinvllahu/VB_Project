@@ -117,7 +117,7 @@ Partial Class Menu
         Me.Guna2ImageButton5.HoverState.Parent = Me.Guna2ImageButton5
         Me.Guna2ImageButton5.Image = Global.Restaurant.My.Resources.Resources.logout_icon_151219
         Me.Guna2ImageButton5.ImageRotate = 0!
-        Me.Guna2ImageButton5.Location = New System.Drawing.Point(295, 212)
+        Me.Guna2ImageButton5.Location = New System.Drawing.Point(500, 212)
         Me.Guna2ImageButton5.Name = "Guna2ImageButton5"
         Me.Guna2ImageButton5.PressedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton5.PressedState.Parent = Me.Guna2ImageButton5
@@ -173,7 +173,7 @@ Partial Class Menu
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(301, 283)
+        Me.Label6.Location = New System.Drawing.Point(481, 283)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(72, 19)
         Me.Label6.TabIndex = 10

@@ -4,6 +4,7 @@ Public Class Room
 
     Dim con As New SqlConnection
     Dim cmd As New SqlCommand
+    Dim i As Integer
 
     Private Sub Room_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
@@ -77,5 +78,50 @@ Public Class Room
         Dim da As New SqlDataAdapter(cmd)
         da.Fill(dt)
         DataGridView1.DataSource = dt
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        con.Open()
+
+        i = Convert.ToInt32(DataGridView1.SelectedCells.Item(0).Value.ToString())
+
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "select * from room where id=" & i & ""
+        cmd.ExecuteNonQuery()
+        Dim dt As New DataTable()
+        Dim da As New SqlDataAdapter(cmd)
+        da.Fill(dt)
+        Dim dr As SqlClient.SqlDataReader
+        dr = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+        While dr.Read
+            TextBox1.Text = dr.GetInt32(0).ToString()
+            TextBox2.Text = dr.GetString(1).ToString()
+            TextBox3.Text = dr.GetString(2).ToString()
+            TextBox4.Text = dr.GetString(3).ToString()
+            TextBox5.Text = dr.GetString(4).ToString()
+        End While
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        con.Open()
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "update room set roomnum='" + TextBox2.Text + "',roomcel='" + TextBox3.Text + "',roomtype='" + TextBox4.Text + "',roomstate='" + TextBox5.Text + "'where id=" & i & ""
+        cmd.ExecuteNonQuery()
+        MessageBox.Show("Records are updated successfully!")
+        Disp_data()
     End Sub
 End Class
