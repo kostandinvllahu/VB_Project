@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\Restaurant\Restaurant\bin\Debug\Restaurant.exe.config
+C:\Users\User\source\repos\Restaurant\Restaurant\bin\Debug\Restaurant.exe
+C:\Users\User\source\repos\Restaurant\Restaurant\bin\Debug\Restaurant.pdb
+C:\Users\User\source\repos\Restaurant\Restaurant\bin\Debug\Restaurant.xml
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.vbprojAssemblyReference.cache
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Form1.resources
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Resources.resources
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.vbproj.GenerateResource.cache
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.vbproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.exe
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.xml
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.pdb
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Menu.resources
+C:\Users\User\source\repos\Restaurant\Restaurant\bin\Debug\Guna.UI2.dll
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.vbproj.CopyComplete
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Room.resources
