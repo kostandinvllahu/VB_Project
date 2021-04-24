@@ -1,7 +1,18 @@
-﻿Public Class Room
+﻿Imports System.Data.SqlClient
+
+Public Class Room
+
+    Dim con As New SqlConnection
+    Dim cmd As New SqlCommand
+
     Private Sub Room_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
-
+        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\HotelVB.mdf;Integrated Security=True;Connect Timeout=30"
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        con.Open()
+        Disp_data()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -19,6 +30,52 @@
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        TextBox4.Text = ComboBox1.SelectedValue
+        TextBox4.Text = ComboBox1.SelectedItem
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        If RadioButton1.Checked Then
+            TextBox5.Text = "Available"
+        End If
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        If RadioButton2.Checked Then
+            TextBox5.Text = "Booked"
+        End If
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
+        TextBox7.Text = ""
+        ComboBox1.Text = "Room Type"
+        RadioButton1.Checked = False
+        RadioButton2.Checked = False
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "insert into Room values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "')"
+        cmd.ExecuteNonQuery()
+        MessageBox.Show("Records are saved successfully!")
+        Disp_data()
+
+    End Sub
+
+    Public Sub Disp_data()
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "select * from Room"
+        cmd.ExecuteNonQuery()
+        Dim dt As New DataTable()
+        Dim da As New SqlDataAdapter(cmd)
+        da.Fill(dt)
+        DataGridView1.DataSource = dt
     End Sub
 End Class

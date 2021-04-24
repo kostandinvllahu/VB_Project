@@ -45,6 +45,8 @@ Partial Class Room
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -155,14 +157,15 @@ Partial Class Room
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(241, 135)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(818, 351)
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(546, 351)
         Me.DataGridView1.TabIndex = 11
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(912, 19)
+        Me.Label5.Location = New System.Drawing.Point(650, 13)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(59, 25)
         Me.Label5.TabIndex = 12
@@ -181,7 +184,7 @@ Partial Class Room
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(219, 506)
+        Me.Button2.Location = New System.Drawing.Point(183, 506)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(121, 48)
         Me.Button2.TabIndex = 14
@@ -191,7 +194,7 @@ Partial Class Room
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(400, 506)
+        Me.Button3.Location = New System.Drawing.Point(352, 506)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(121, 48)
         Me.Button3.TabIndex = 15
@@ -201,7 +204,7 @@ Partial Class Room
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(576, 506)
+        Me.Button4.Location = New System.Drawing.Point(655, 506)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(121, 48)
         Me.Button4.TabIndex = 16
@@ -214,14 +217,14 @@ Partial Class Room
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(319, 107)
+        Me.TextBox7.Location = New System.Drawing.Point(310, 107)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(341, 20)
         Me.TextBox7.TabIndex = 17
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(666, 107)
+        Me.Button7.Location = New System.Drawing.Point(657, 105)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(121, 22)
         Me.Button7.TabIndex = 18
@@ -232,7 +235,7 @@ Partial Class Room
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(247, 107)
+        Me.Label8.Location = New System.Drawing.Point(237, 108)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(67, 19)
         Me.Label8.TabIndex = 19
@@ -248,11 +251,30 @@ Partial Class Room
         Me.Label6.TabIndex = 20
         Me.Label6.Text = "ROOM MANAGEMENT"
         '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(140, 409)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(32, 20)
+        Me.TextBox5.TabIndex = 21
+        '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(508, 506)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(121, 48)
+        Me.Button5.TabIndex = 22
+        Me.Button5.Text = "Delete"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'Room
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1118, 641)
+        Me.ClientSize = New System.Drawing.Size(886, 641)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button7)
@@ -305,4 +327,6 @@ Partial Class Room
     Friend WithEvents Button7 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Button5 As Button
 End Class
