@@ -78,6 +78,7 @@ Partial Class Room
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(32, 20)
         Me.TextBox4.TabIndex = 3
+        Me.TextBox4.Visible = False
         '
         'Label1
         '
@@ -259,6 +260,7 @@ Partial Class Room
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(32, 20)
         Me.TextBox5.TabIndex = 21
+        Me.TextBox5.Visible = False
         '
         'Button5
         '

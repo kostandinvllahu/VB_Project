@@ -40,6 +40,6 @@
     Private Sub Guna2ImageButton6_Click(sender As Object, e As EventArgs) Handles Guna2ImageButton6.Click
         Dim cl As Clients = New Clients()
         cl.Show()
-        Me.Show()
+        Me.Close()
     End Sub
 End Class

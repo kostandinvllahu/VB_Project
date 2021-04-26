@@ -262,10 +262,11 @@ Partial Class Staff
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(12, 420)
+        Me.TextBox7.Location = New System.Drawing.Point(16, 414)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(28, 20)
         Me.TextBox7.TabIndex = 26
+        Me.TextBox7.Visible = False
         '
         'Label2
         '

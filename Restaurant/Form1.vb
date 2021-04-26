@@ -9,7 +9,6 @@ Public Class Form1
         Dim dt As DataTable = New DataTable()
         sda.Fill(dt)
         If (dt.Rows.Count > 0) Then
-            MessageBox.Show("Login Success", "information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Dim this As Menu = New Menu()
             this.Show()
             Me.Hide()
