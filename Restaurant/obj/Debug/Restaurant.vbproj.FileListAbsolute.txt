@@ -14,3 +14,4 @@ C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Menu.resou
 C:\Users\User\source\repos\Restaurant\Restaurant\bin\Debug\Guna.UI2.dll
 C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.vbproj.CopyComplete
 C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Room.resources
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Staff.resources

@@ -4,7 +4,7 @@ Imports System.Data.SqlClient
 Public Class Form1
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\HotelVB.mdf;Integrated Security=True;Connect Timeout=30")
-        Dim cmd As SqlCommand = New SqlCommand("select * from login where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", con)
+        Dim cmd As SqlCommand = New SqlCommand("select * from staff where name='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", con)
         Dim sda As SqlDataAdapter = New SqlDataAdapter(cmd)
         Dim dt As DataTable = New DataTable()
         sda.Fill(dt)

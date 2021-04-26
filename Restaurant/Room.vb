@@ -57,7 +57,7 @@ Public Class Room
             Clean()
             con.Close()
         End If
-        If TextBox1.Text = "" Then
+        If TextBox1.Text >= "" Then
             cmd = con.CreateCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = "insert into Room values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "')"

@@ -28,4 +28,18 @@
         ex.Show()
         Me.Close()
     End Sub
+
+    Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Guna2ImageButton6_Click(sender As Object, e As EventArgs) Handles Guna2ImageButton6.Click
+        Dim cl As Clients = New Clients()
+        cl.Show()
+        Me.Show()
+    End Sub
 End Class

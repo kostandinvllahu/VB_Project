@@ -33,6 +33,8 @@ Partial Class Menu
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Guna2ImageButton6 = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -179,6 +181,33 @@ Partial Class Menu
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "LOGOUT"
         '
+        'Guna2ImageButton6
+        '
+        Me.Guna2ImageButton6.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ImageButton6.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton6.CheckedState.Parent = Me.Guna2ImageButton6
+        Me.Guna2ImageButton6.HoverState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton6.HoverState.Parent = Me.Guna2ImageButton6
+        Me.Guna2ImageButton6.Image = Global.Restaurant.My.Resources.Resources.clients_icon_png_1
+        Me.Guna2ImageButton6.ImageRotate = 0!
+        Me.Guna2ImageButton6.Location = New System.Drawing.Point(295, 212)
+        Me.Guna2ImageButton6.Name = "Guna2ImageButton6"
+        Me.Guna2ImageButton6.PressedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton6.PressedState.Parent = Me.Guna2ImageButton6
+        Me.Guna2ImageButton6.Size = New System.Drawing.Size(65, 77)
+        Me.Guna2ImageButton6.TabIndex = 11
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(301, 283)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(59, 19)
+        Me.Label7.TabIndex = 12
+        Me.Label7.Text = "Clients"
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -186,6 +215,8 @@ Partial Class Menu
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.BackgroundImage = Global.Restaurant.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(625, 386)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Guna2ImageButton6)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -217,4 +248,6 @@ Partial Class Menu
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents Guna2ImageButton6 As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents Label7 As Label
 End Class

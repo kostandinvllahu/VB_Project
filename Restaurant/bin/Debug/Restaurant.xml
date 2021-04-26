@@ -37,6 +37,11 @@ Restaurant
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Restaurant.My.Resources.Resources.clients_icon_png_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Restaurant.My.Resources.Resources.logout_icon_151219">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
