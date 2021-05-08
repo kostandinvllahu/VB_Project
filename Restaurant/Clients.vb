@@ -145,7 +145,7 @@ Public Class Clients
         End If
 
         con.Open()
-        Dim query As String = "SELECT  * FROM staff WHERE name='" + TextBox6.Text + "'"
+        Dim query As String = "SELECT  * FROM clients WHERE name='" + TextBox6.Text + "'"
         Using con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\HotelVB.mdf;Integrated Security=True;Connect Timeout=30")
             Using cmd As SqlCommand = New SqlCommand(query, con)
                 Using da As SqlDataAdapter = New SqlDataAdapter()

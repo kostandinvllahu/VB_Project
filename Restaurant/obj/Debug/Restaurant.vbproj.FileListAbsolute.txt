@@ -16,3 +16,4 @@ C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.vbproj.Cop
 C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Room.resources
 C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Staff.resources
 C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Clients.resources
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Book.resources
