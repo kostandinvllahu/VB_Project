@@ -22,6 +22,7 @@ Partial Class Book
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -49,6 +50,12 @@ Partial Class Book
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -241,7 +248,7 @@ Partial Class Book
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(259, 31)
+        Me.DataGridView1.Location = New System.Drawing.Point(204, 73)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(676, 382)
         Me.DataGridView1.TabIndex = 142
@@ -296,11 +303,62 @@ Partial Class Book
         Me.Button5.Text = "Return"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(275, 48)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(366, 20)
+        Me.TextBox7.TabIndex = 148
+        '
+        'Button6
+        '
+        Me.Button6.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(649, 46)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(92, 23)
+        Me.Button6.TabIndex = 149
+        Me.Button6.Text = "Search"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(205, 46)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(63, 19)
+        Me.Label10.TabIndex = 150
+        Me.Label10.Text = "Search"
+        '
+        'Timer1
+        '
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(116, 361)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(73, 20)
+        Me.TextBox8.TabIndex = 151
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(116, 387)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 152
+        Me.Button7.Text = "Button7"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'Book
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1095, 553)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -364,4 +422,10 @@ Partial Class Book
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Button7 As Button
 End Class
