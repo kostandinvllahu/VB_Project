@@ -12,17 +12,20 @@ Public Class Book
         con.Open()
         fillClientcombo()
         fillRoomcombo()
+        TextBox5.Visible = False
+        Button8.Visible = False
     End Sub
 
     Public Sub Clear()
         TextBox1.Text = ""
         TextBox2.Text = ""
         TextBox3.Text = ""
-        TextBox4.Text = ""
-        TextBox5.Text = ""
         TextBox6.Text = ""
+        TextBox8.Text = ""
         RadioButton1.Checked = False
         RadioButton2.Checked = False
+        TextBox5.Visible = False
+        Button8.Visible = False
 
     End Sub
 
@@ -86,20 +89,21 @@ Public Class Book
     End Sub
 
     Public Sub calendar()
+        Dim roomPrice As Integer = 30
         Dim DateEntry As DateTime = Convert.ToDateTime(dateTimePicker1.Text)
         Dim DateExit As DateTime = Convert.ToDateTime(DateTimePicker2.Text)
         Dim CountDays As TimeSpan = DateExit.Subtract(DateEntry)
         Dim TotalDays = Convert.ToInt32(CountDays.Days)
         If Convert.ToInt32(CountDays.Days) >= 0 Then
             TextBox8.Text = TotalDays
+            TextBox6.Text = TotalDays * roomPrice
         Else
             MsgBox("Please enter a valid date")
-
         End If
     End Sub
 
     Private Sub dateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles dateTimePicker1.ValueChanged
-        TextBox4.Text = dateTimePicker1.Text
+
 
     End Sub
 
@@ -108,10 +112,46 @@ Public Class Book
     End Sub
 
     Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
-        TextBox5.Text = DateTimePicker2.Text
+
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         calendar()
+    End Sub
+
+    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles TextBox8.TextChanged
+
+    End Sub
+    Public Sub parking()
+        If (RadioButton1.Checked = True) Then
+            TextBox5.Visible = True
+            Button8.Visible = True
+            Dim time As Integer = 3.7
+            Dim charge As Integer = Convert.ToInt32(TextBox8.Text)
+            If (charge = 1) Then
+                TextBox5.Text = "3.70"
+
+            Else
+                Dim TotalParking As Integer = charge * time
+                TextBox5.Text = TotalParking.ToString
+
+            End If
+
+        End If
+    End Sub
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        TextBox5.Visible = True
+        Button8.Visible = True
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        parking()
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        If (RadioButton2.Checked = True) Then
+            TextBox5.Visible = False
+            Button8.Visible = False
+        End If
     End Sub
 End Class

@@ -22,7 +22,6 @@ Partial Class Menu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2ImageButton1 = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2ImageButton2 = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2ImageButton3 = New Guna.UI2.WinForms.Guna2ImageButton()
@@ -36,15 +35,6 @@ Partial Class Menu
         Me.Guna2ImageButton6 = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "HELLO"
         '
         'Guna2ImageButton1
         '
@@ -227,7 +217,6 @@ Partial Class Menu
         Me.Controls.Add(Me.Guna2ImageButton3)
         Me.Controls.Add(Me.Guna2ImageButton2)
         Me.Controls.Add(Me.Guna2ImageButton1)
-        Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Menu"
@@ -236,8 +225,6 @@ Partial Class Menu
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents Guna2ImageButton1 As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents Guna2ImageButton2 As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents Guna2ImageButton3 As Guna.UI2.WinForms.Guna2ImageButton

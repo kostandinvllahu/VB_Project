@@ -39,8 +39,6 @@ Partial Class Book
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.dateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -56,6 +54,8 @@ Partial Class Book
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Button7 = New System.Windows.Forms.Button()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Button8 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -202,20 +202,6 @@ Partial Class Book
         Me.DateTimePicker2.Size = New System.Drawing.Size(121, 20)
         Me.DateTimePicker2.TabIndex = 136
         '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(16, 243)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 137
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(16, 316)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 138
-        '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
@@ -335,25 +321,43 @@ Partial Class Book
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(116, 361)
+        Me.TextBox8.Location = New System.Drawing.Point(16, 316)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(73, 20)
         Me.TextBox8.TabIndex = 151
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(116, 387)
+        Me.Button7.Location = New System.Drawing.Point(112, 316)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(75, 23)
         Me.Button7.TabIndex = 152
         Me.Button7.Text = "Button7"
         Me.Button7.UseVisualStyleBackColor = True
         '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(102, 358)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(73, 20)
+        Me.TextBox5.TabIndex = 154
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(102, 387)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(32, 23)
+        Me.Button8.TabIndex = 155
+        Me.Button8.Text = "OK"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
         'Book
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1095, 553)
+        Me.Controls.Add(Me.Button8)
+        Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.Label10)
@@ -368,8 +372,6 @@ Partial Class Book
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.dateTimePicker1)
         Me.Controls.Add(Me.TextBox3)
@@ -411,8 +413,6 @@ Partial Class Book
     Friend WithEvents TextBox3 As TextBox
     Private WithEvents dateTimePicker1 As DateTimePicker
     Private WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents TextBox6 As TextBox
@@ -428,4 +428,6 @@ Partial Class Book
     Friend WithEvents Timer1 As Timer
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents Button7 As Button
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Button8 As Button
 End Class
