@@ -154,4 +154,16 @@ Public Class Book
             Button8.Visible = False
         End If
     End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        TextBox4.Text = "Pending"
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        TextBox4.Text = "Paid"
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        TextBox4.Text = "Not Paid"
+    End Sub
 End Class
