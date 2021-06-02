@@ -158,6 +158,7 @@ Partial Class Book
         '
         'txtID
         '
+        Me.txtID.Enabled = False
         Me.txtID.Location = New System.Drawing.Point(16, 31)
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(37, 20)
@@ -169,6 +170,7 @@ Partial Class Book
         Me.txtClient.Name = "txtClient"
         Me.txtClient.Size = New System.Drawing.Size(100, 20)
         Me.txtClient.TabIndex = 10
+        Me.txtClient.Visible = False
         '
         'ComboBox1
         '
@@ -194,6 +196,7 @@ Partial Class Book
         Me.txtRoom.Name = "txtRoom"
         Me.txtRoom.Size = New System.Drawing.Size(100, 20)
         Me.txtRoom.TabIndex = 13
+        Me.txtRoom.Visible = False
         '
         'dateTimePicker1
         '

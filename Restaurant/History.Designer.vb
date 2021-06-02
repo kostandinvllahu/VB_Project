@@ -112,6 +112,7 @@ Partial Class History
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "History"
         Me.Text = "History"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

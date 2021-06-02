@@ -13,6 +13,7 @@ Public Class Book
         fillClientcombo()
         fillRoomcombo()
         Disp_data()
+        Clear()
         txtParking.Visible = False
         btnCheckParking.Visible = False
     End Sub
