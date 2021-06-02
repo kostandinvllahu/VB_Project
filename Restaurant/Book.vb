@@ -103,7 +103,8 @@ Public Class Book
     End Sub
 
     Private Sub dateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles dateTimePicker1.ValueChanged
-
+        ' Dim checkIn As String = Convert.ToString(dateTimePicker1.Text)
+        TextBox2.Text = Convert.ToString(dateTimePicker1.Text)
 
     End Sub
 
@@ -112,7 +113,8 @@ Public Class Book
     End Sub
 
     Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
-
+        ' Dim checkOut As String = Convert.ToString(DateTimePicker2.Text)
+        TextBox1.Text = Convert.ToString(DateTimePicker2.Text)
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnCheckPrice.Click
@@ -134,7 +136,6 @@ Public Class Book
             Else
                 Dim TotalParking As Integer = charge * time
                 txtParking.Text = TotalParking.ToString
-                'SHIKO KETU SE KE ERROR SI TE KALKULOSH CMIMIN TOTAL
                 Dim P1 As Integer = txtParking.Text
                 Dim P2 As Integer = txtTotalPrice.Text
                 Dim TotalPrice As Integer = P1 + P2
@@ -170,5 +171,27 @@ Public Class Book
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         TextBox4.Text = "Not Paid"
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If txtID.Text = "" Then  'KETU RREGULLO NJE ERROR CATCH'
+            con.Open()
+            MessageBox.Show("Enter ID first!")
+            Clear()
+            con.Close()
+        End If
+        If txtID.Text >= "" Then
+            cmd = con.CreateCommand()
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = "insert into Book_tbl values('" + txtID.Text + "','" + txtClient.Text + "','" + txtRoom.Text + "','" + TextBox2.Text + "','" + TextBox1.Text + "','" + txtDate.Text + "','" + txtParking.Text + "','" + txtTotalPrice.Text + "')"
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Records are saved successfully!")
+            Clear()
+            ' Disp_data()
+        End If
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
     End Sub
 End Class

@@ -60,6 +60,8 @@ Partial Class Book
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -325,14 +327,14 @@ Partial Class Book
         '
         'txtDate
         '
-        Me.txtDate.Location = New System.Drawing.Point(16, 316)
+        Me.txtDate.Location = New System.Drawing.Point(143, 290)
         Me.txtDate.Name = "txtDate"
-        Me.txtDate.Size = New System.Drawing.Size(73, 20)
+        Me.txtDate.Size = New System.Drawing.Size(50, 20)
         Me.txtDate.TabIndex = 151
         '
         'btnCheckPrice
         '
-        Me.btnCheckPrice.Location = New System.Drawing.Point(112, 316)
+        Me.btnCheckPrice.Location = New System.Drawing.Point(118, 316)
         Me.btnCheckPrice.Name = "btnCheckPrice"
         Me.btnCheckPrice.Size = New System.Drawing.Size(75, 23)
         Me.btnCheckPrice.TabIndex = 152
@@ -389,11 +391,27 @@ Partial Class Book
         Me.TextBox4.Size = New System.Drawing.Size(73, 20)
         Me.TextBox4.TabIndex = 159
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(16, 316)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(96, 20)
+        Me.TextBox1.TabIndex = 160
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(16, 243)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(92, 20)
+        Me.TextBox2.TabIndex = 161
+        '
         'Book
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1095, 553)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Button11)
         Me.Controls.Add(Me.Button10)
@@ -476,4 +494,6 @@ Partial Class Book
     Friend WithEvents Button10 As Button
     Friend WithEvents Button11 As Button
     Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
 End Class
