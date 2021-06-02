@@ -17,3 +17,4 @@ C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Room.resou
 C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Staff.resources
 C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Clients.resources
 C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Book.resources
+C:\Users\User\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.History.resources

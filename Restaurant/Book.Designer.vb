@@ -62,6 +62,7 @@ Partial Class Book
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Guna2ImageButton1 = New Guna.UI2.WinForms.Guna2ImageButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -408,11 +409,27 @@ Partial Class Book
         Me.TextBox2.TabIndex = 161
         Me.TextBox2.Visible = False
         '
+        'Guna2ImageButton1
+        '
+        Me.Guna2ImageButton1.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton1.CheckedState.Parent = Me.Guna2ImageButton1
+        Me.Guna2ImageButton1.HoverState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton1.HoverState.Parent = Me.Guna2ImageButton1
+        Me.Guna2ImageButton1.Image = Global.Restaurant.My.Resources.Resources.refresh
+        Me.Guna2ImageButton1.ImageRotate = 0!
+        Me.Guna2ImageButton1.Location = New System.Drawing.Point(747, 12)
+        Me.Guna2ImageButton1.Name = "Guna2ImageButton1"
+        Me.Guna2ImageButton1.PressedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton1.PressedState.Parent = Me.Guna2ImageButton1
+        Me.Guna2ImageButton1.Size = New System.Drawing.Size(58, 58)
+        Me.Guna2ImageButton1.TabIndex = 162
+        '
         'Book
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1095, 553)
+        Me.Controls.Add(Me.Guna2ImageButton1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.TextBox4)
@@ -499,4 +516,5 @@ Partial Class Book
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Guna2ImageButton1 As Guna.UI2.WinForms.Guna2ImageButton
 End Class

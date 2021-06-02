@@ -39,6 +39,7 @@ Public Class Book
         txtParking.Visible = False
         btnCheckParking.Visible = False
         TextBox4.Text = ""
+        TextBox7.Text = ""
     End Sub
 
     Public Sub fillRoomcombo()
@@ -270,5 +271,34 @@ Public Class Book
             Clear()
             Disp_data()
         End If
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+
+        con.Open()
+        Dim query As String = "SELECT  * FROM Book_tbl WHERE client='" + txtClient.Text + "'"
+        Using con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\HotelVB.mdf;Integrated Security=True;Connect Timeout=30")
+            Using cmd As SqlCommand = New SqlCommand(query, con)
+                Using da As SqlDataAdapter = New SqlDataAdapter()
+                    da.SelectCommand = cmd
+                    Using dt As New DataTable()
+                        da.Fill(dt)
+                        If dt.Rows.Count > 0 Then
+                            DataGridView1.DataSource = dt
+                        Else
+                            MessageBox.Show("No records found")
+                        End If
+                    End Using
+                End Using
+            End Using
+        End Using
+    End Sub
+
+    Private Sub Guna2ImageButton1_Click(sender As Object, e As EventArgs) Handles Guna2ImageButton1.Click
+        Disp_data()
+        TextBox7.Text = ""
     End Sub
 End Class
