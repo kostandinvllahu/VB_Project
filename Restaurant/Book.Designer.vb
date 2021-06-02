@@ -32,16 +32,16 @@ Partial Class Book
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.txtClient = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtRoom = New System.Windows.Forms.TextBox()
         Me.dateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtTotalPrice = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -52,10 +52,10 @@ Partial Class Book
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.txtDate = New System.Windows.Forms.TextBox()
+        Me.btnCheckPrice = New System.Windows.Forms.Button()
+        Me.txtParking = New System.Windows.Forms.TextBox()
+        Me.btnCheckParking = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
@@ -153,19 +153,19 @@ Partial Class Book
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "Room Price"
         '
-        'TextBox1
+        'txtID
         '
-        Me.TextBox1.Location = New System.Drawing.Point(16, 31)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(37, 20)
-        Me.TextBox1.TabIndex = 9
+        Me.txtID.Location = New System.Drawing.Point(16, 31)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(37, 20)
+        Me.txtID.TabIndex = 9
         '
-        'TextBox2
+        'txtClient
         '
-        Me.TextBox2.Location = New System.Drawing.Point(16, 100)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 10
+        Me.txtClient.Location = New System.Drawing.Point(16, 100)
+        Me.txtClient.Name = "txtClient"
+        Me.txtClient.Size = New System.Drawing.Size(100, 20)
+        Me.txtClient.TabIndex = 10
         '
         'ComboBox1
         '
@@ -185,12 +185,12 @@ Partial Class Book
         Me.ComboBox2.TabIndex = 12
         Me.ComboBox2.Text = "Rooms"
         '
-        'TextBox3
+        'txtRoom
         '
-        Me.TextBox3.Location = New System.Drawing.Point(16, 172)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 13
+        Me.txtRoom.Location = New System.Drawing.Point(16, 172)
+        Me.txtRoom.Name = "txtRoom"
+        Me.txtRoom.Size = New System.Drawing.Size(100, 20)
+        Me.txtRoom.TabIndex = 13
         '
         'dateTimePicker1
         '
@@ -228,12 +228,12 @@ Partial Class Book
         Me.RadioButton2.Text = "No"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'txtTotalPrice
         '
-        Me.TextBox6.Location = New System.Drawing.Point(16, 435)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 141
+        Me.txtTotalPrice.Location = New System.Drawing.Point(16, 435)
+        Me.txtTotalPrice.Name = "txtTotalPrice"
+        Me.txtTotalPrice.Size = New System.Drawing.Size(100, 20)
+        Me.txtTotalPrice.TabIndex = 141
         '
         'DataGridView1
         '
@@ -323,37 +323,37 @@ Partial Class Book
         'Timer1
         '
         '
-        'TextBox8
+        'txtDate
         '
-        Me.TextBox8.Location = New System.Drawing.Point(16, 316)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(73, 20)
-        Me.TextBox8.TabIndex = 151
+        Me.txtDate.Location = New System.Drawing.Point(16, 316)
+        Me.txtDate.Name = "txtDate"
+        Me.txtDate.Size = New System.Drawing.Size(73, 20)
+        Me.txtDate.TabIndex = 151
         '
-        'Button7
+        'btnCheckPrice
         '
-        Me.Button7.Location = New System.Drawing.Point(112, 316)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 23)
-        Me.Button7.TabIndex = 152
-        Me.Button7.Text = "Check Price"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.btnCheckPrice.Location = New System.Drawing.Point(112, 316)
+        Me.btnCheckPrice.Name = "btnCheckPrice"
+        Me.btnCheckPrice.Size = New System.Drawing.Size(75, 23)
+        Me.btnCheckPrice.TabIndex = 152
+        Me.btnCheckPrice.Text = "Check Price"
+        Me.btnCheckPrice.UseVisualStyleBackColor = True
         '
-        'TextBox5
+        'txtParking
         '
-        Me.TextBox5.Location = New System.Drawing.Point(102, 358)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(73, 20)
-        Me.TextBox5.TabIndex = 154
+        Me.txtParking.Location = New System.Drawing.Point(102, 358)
+        Me.txtParking.Name = "txtParking"
+        Me.txtParking.Size = New System.Drawing.Size(73, 20)
+        Me.txtParking.TabIndex = 154
         '
-        'Button8
+        'btnCheckParking
         '
-        Me.Button8.Location = New System.Drawing.Point(102, 387)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(32, 23)
-        Me.Button8.TabIndex = 155
-        Me.Button8.Text = "OK"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.btnCheckParking.Location = New System.Drawing.Point(102, 387)
+        Me.btnCheckParking.Name = "btnCheckParking"
+        Me.btnCheckParking.Size = New System.Drawing.Size(32, 23)
+        Me.btnCheckParking.TabIndex = 155
+        Me.btnCheckParking.Text = "OK"
+        Me.btnCheckParking.UseVisualStyleBackColor = True
         '
         'Button9
         '
@@ -398,10 +398,10 @@ Partial Class Book
         Me.Controls.Add(Me.Button11)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.btnCheckParking)
+        Me.Controls.Add(Me.txtParking)
+        Me.Controls.Add(Me.btnCheckPrice)
+        Me.Controls.Add(Me.txtDate)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.TextBox7)
@@ -411,16 +411,16 @@ Partial Class Book
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.txtTotalPrice)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.dateTimePicker1)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtRoom)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtClient)
+        Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -448,16 +448,16 @@ Partial Class Book
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtID As TextBox
+    Friend WithEvents txtClient As TextBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtRoom As TextBox
     Private WithEvents dateTimePicker1 As DateTimePicker
     Private WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtTotalPrice As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
@@ -468,10 +468,10 @@ Partial Class Book
     Friend WithEvents Button6 As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents Button7 As Button
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Button8 As Button
+    Friend WithEvents txtDate As TextBox
+    Friend WithEvents btnCheckPrice As Button
+    Friend WithEvents txtParking As TextBox
+    Friend WithEvents btnCheckParking As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents Button10 As Button
     Friend WithEvents Button11 As Button

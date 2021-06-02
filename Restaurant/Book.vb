@@ -12,20 +12,20 @@ Public Class Book
         con.Open()
         fillClientcombo()
         fillRoomcombo()
-        TextBox5.Visible = False
-        Button8.Visible = False
+        txtParking.Visible = False
+        btnCheckParking.Visible = False
     End Sub
 
     Public Sub Clear()
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        TextBox3.Text = ""
-        TextBox6.Text = ""
-        TextBox8.Text = ""
+        txtID.Text = ""
+        txtClient.Text = ""
+        txtRoom.Text = ""
+        txtTotalPrice.Text = ""
+        txtDate.Text = ""
         RadioButton1.Checked = False
         RadioButton2.Checked = False
-        TextBox5.Visible = False
-        Button8.Visible = False
+        txtParking.Visible = False
+        btnCheckParking.Visible = False
 
     End Sub
 
@@ -63,8 +63,8 @@ Public Class Book
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        TextBox1.Text = ComboBox1.SelectedIndex.ToString
-        TextBox2.Text = ComboBox1.Text
+        txtID.Text = ComboBox1.SelectedIndex.ToString
+        txtClient.Text = ComboBox1.Text
         'NUK E DI CA KA DASHUR TE THOT AUTORI
         '  Dim Query As String = "select  name from clients where id='" & TextBox1.Text & "'"
         '   Dim Command As New Command(Query, con)
@@ -85,7 +85,7 @@ Public Class Book
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
-        TextBox3.Text = ComboBox2.Text
+        txtRoom.Text = ComboBox2.Text
     End Sub
 
     Public Sub calendar()
@@ -95,8 +95,8 @@ Public Class Book
         Dim CountDays As TimeSpan = DateExit.Subtract(DateEntry)
         Dim TotalDays = Convert.ToInt32(CountDays.Days)
         If Convert.ToInt32(CountDays.Days) >= 0 Then
-            TextBox8.Text = TotalDays
-            TextBox6.Text = TotalDays * roomPrice
+            txtDate.Text = TotalDays
+            txtTotalPrice.Text = TotalDays * roomPrice
         Else
             MsgBox("Please enter a valid date")
         End If
@@ -115,43 +115,48 @@ Public Class Book
 
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnCheckPrice.Click
         calendar()
     End Sub
 
-    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles TextBox8.TextChanged
+    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles txtDate.TextChanged
 
     End Sub
     Public Sub parking()
         If (RadioButton1.Checked = True) Then
-            TextBox5.Visible = True
-            Button8.Visible = True
+            txtParking.Visible = True
+            btnCheckParking.Visible = True
             Dim time As Integer = 3.7
-            Dim charge As Integer = Convert.ToInt32(TextBox8.Text)
+            Dim charge As Integer = Convert.ToInt32(txtDate.Text)
             If (charge = 1) Then
-                TextBox5.Text = "3.70"
+                txtParking.Text = "3.70"
 
             Else
                 Dim TotalParking As Integer = charge * time
-                TextBox5.Text = TotalParking.ToString
+                txtParking.Text = TotalParking.ToString
+                'SHIKO KETU SE KE ERROR SI TE KALKULOSH CMIMIN TOTAL
+                Dim P1 As Integer = txtParking.Text
+                Dim P2 As Integer = txtTotalPrice.Text
+                Dim TotalPrice As Integer = P1 + P2
+                txtTotalPrice.Text = Convert.ToString(TotalPrice)
 
             End If
 
         End If
     End Sub
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-        TextBox5.Visible = True
-        Button8.Visible = True
+        txtParking.Visible = True
+        btnCheckParking.Visible = True
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btnCheckParking.Click
         parking()
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
         If (RadioButton2.Checked = True) Then
-            TextBox5.Visible = False
-            Button8.Visible = False
+            txtParking.Visible = False
+            btnCheckParking.Visible = False
         End If
     End Sub
 
