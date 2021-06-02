@@ -140,10 +140,10 @@ Public Class Book
         If (RadioButton1.Checked = True) Then
             txtParking.Visible = True
             btnCheckParking.Visible = True
-            Dim time As Integer = 3.7
+            Dim time As Integer = 3
             Dim charge As Integer = Convert.ToInt32(txtDate.Text)
             If (charge = 1) Then
-                txtParking.Text = "3.70"
+                txtParking.Text = "3.00"
 
             Else
                 Dim TotalParking As Integer = charge * time
@@ -249,5 +249,26 @@ Public Class Book
             txtTotalPrice.Text = dr.GetString(7).ToString() 'TOTAL PRICE 8
             TextBox4.Text = dr.GetString(8).ToString() 'STATUS 9
         End While
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        If TextBox4.Text = "Pending" Then
+            MsgBox("The room must be paid then can be deleted")
+            Clear()
+        ElseIf TextBox4.Text = "Not Paid" Then
+            MsgBox("Contact your manager now!")
+        ElseIf TextBox4.Text = "Paid" Then
+            con.Open()
+            cmd = con.CreateCommand()
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = "Delete from Book_tbl where id='" + txtID.Text + "'"
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Booking are deleted successfully!")
+            Clear()
+            Disp_data()
+        End If
     End Sub
 End Class
