@@ -252,6 +252,27 @@ Public Class Book
         End While
     End Sub
 
+    Public Sub History()
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "insert into History_tbl values('" + txtID.Text + "','" + txtClient.Text + "','" + txtRoom.Text + "','" + TextBox2.Text + "','" + TextBox1.Text + "','" + txtDate.Text + "','" + txtParking.Text + "','" + txtTotalPrice.Text + "','" + TextBox4.Text + "')"
+        cmd.ExecuteNonQuery()
+        MessageBox.Show("Records are saved successfully!")
+        Clear()
+        Disp_data()
+    End Sub
+
+    Public Sub Delete()
+        con.Open()
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "Delete from Book_tbl where id='" + txtID.Text + "'"
+        cmd.ExecuteNonQuery()
+        MessageBox.Show("Booking are deleted successfully!")
+        History()
+        con.Close()
+    End Sub
+
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If con.State = ConnectionState.Open Then
             con.Close()
@@ -261,15 +282,11 @@ Public Class Book
             Clear()
         ElseIf TextBox4.Text = "Not Paid" Then
             MsgBox("Contact your manager now!")
+            Delete()
         ElseIf TextBox4.Text = "Paid" Then
-            con.Open()
-            cmd = con.CreateCommand()
-            cmd.CommandType = CommandType.Text
-            cmd.CommandText = "Delete from Book_tbl where id='" + txtID.Text + "'"
-            cmd.ExecuteNonQuery()
-            MessageBox.Show("Booking are deleted successfully!")
-            Clear()
-            Disp_data()
+            Delete()
+            ' Clear()
+            ' Disp_data()
         End If
     End Sub
 
@@ -279,7 +296,7 @@ Public Class Book
         End If
 
         con.Open()
-        Dim query As String = "SELECT  * FROM Book_tbl WHERE client='" + txtClient.Text + "'"
+        Dim query As String = "SELECT  * FROM Book_tbl WHERE client='" + TextBox7.Text + "'"
         Using con As SqlConnection = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\HotelVB.mdf;Integrated Security=True;Connect Timeout=30")
             Using cmd As SqlCommand = New SqlCommand(query, con)
                 Using da As SqlDataAdapter = New SqlDataAdapter()
