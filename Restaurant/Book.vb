@@ -206,4 +206,48 @@ Public Class Book
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
 
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        con.Open()
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "update Book_tbl set room='" + txtRoom.Text + "',checkin='" + TextBox2.Text + "',checkout='" + TextBox1.Text + "',stayindDays='" + txtDate.Text + "',parkingPrice='" + txtParking.Text + "', TotalPrice='" + txtTotalPrice.Text + "',PaymentStatus='" + TextBox4.Text + "'where id=" + txtID.Text + ""
+        cmd.ExecuteNonQuery()
+        MessageBox.Show("Records are updated successfully!")
+        Clear()
+        Disp_data()
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        con.Open()
+
+        i = Convert.ToInt32(DataGridView1.SelectedCells.Item(0).Value.ToString())
+
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "select * from Book_tbl where id=" & i & ""
+        cmd.ExecuteNonQuery()
+        Dim dt As New DataTable()
+        Dim da As New SqlDataAdapter(cmd)
+        da.Fill(dt)
+        Dim dr As SqlClient.SqlDataReader
+        dr = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+        While dr.Read
+            txtID.Text = dr.GetInt32(0).ToString() 'PO 1
+            txtClient.Text = dr.GetString(1).ToString() 'PO 2
+            txtRoom.Text = dr.GetString(2).ToString() 'PO 3
+            TextBox2.Text = dr.GetString(3).ToString() 'CHECKIN 4
+            TextBox1.Text = dr.GetString(4).ToString() 'CHECKOUT 5
+            txtDate.Text = dr.GetString(5).ToString() 'PARKING DAYS 6
+            txtParking.Text = dr.GetString(6).ToString() 'PARKING PRICE 7
+            txtTotalPrice.Text = dr.GetString(7).ToString() 'TOTAL PRICE 8
+            TextBox4.Text = dr.GetString(8).ToString() 'STATUS 9
+        End While
+    End Sub
 End Class
