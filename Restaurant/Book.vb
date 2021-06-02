@@ -12,8 +12,20 @@ Public Class Book
         con.Open()
         fillClientcombo()
         fillRoomcombo()
+        Disp_data()
         txtParking.Visible = False
         btnCheckParking.Visible = False
+    End Sub
+
+    Public Sub Disp_data()
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "select * from Book_tbl"
+        cmd.ExecuteNonQuery()
+        Dim dt As New DataTable()
+        Dim da As New SqlDataAdapter(cmd)
+        da.Fill(dt)
+        DataGridView1.DataSource = dt
     End Sub
 
     Public Sub Clear()
@@ -26,7 +38,7 @@ Public Class Book
         RadioButton2.Checked = False
         txtParking.Visible = False
         btnCheckParking.Visible = False
-
+        TextBox4.Text = ""
     End Sub
 
     Public Sub fillRoomcombo()
@@ -183,11 +195,11 @@ Public Class Book
         If txtID.Text >= "" Then
             cmd = con.CreateCommand()
             cmd.CommandType = CommandType.Text
-            cmd.CommandText = "insert into Book_tbl values('" + txtID.Text + "','" + txtClient.Text + "','" + txtRoom.Text + "','" + TextBox2.Text + "','" + TextBox1.Text + "','" + txtDate.Text + "','" + txtParking.Text + "','" + txtTotalPrice.Text + "')"
+            cmd.CommandText = "insert into Book_tbl values('" + txtID.Text + "','" + txtClient.Text + "','" + txtRoom.Text + "','" + TextBox2.Text + "','" + TextBox1.Text + "','" + txtDate.Text + "','" + txtParking.Text + "','" + txtTotalPrice.Text + "','" + TextBox4.Text + "')"
             cmd.ExecuteNonQuery()
             MessageBox.Show("Records are saved successfully!")
             Clear()
-            ' Disp_data()
+            Disp_data()
         End If
     End Sub
 

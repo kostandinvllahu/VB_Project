@@ -242,7 +242,8 @@ Partial Class Book
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(204, 73)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(676, 382)
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(791, 382)
         Me.DataGridView1.TabIndex = 142
         '
         'Button1
@@ -334,9 +335,9 @@ Partial Class Book
         '
         'btnCheckPrice
         '
-        Me.btnCheckPrice.Location = New System.Drawing.Point(118, 316)
+        Me.btnCheckPrice.Location = New System.Drawing.Point(143, 316)
         Me.btnCheckPrice.Name = "btnCheckPrice"
-        Me.btnCheckPrice.Size = New System.Drawing.Size(75, 23)
+        Me.btnCheckPrice.Size = New System.Drawing.Size(50, 23)
         Me.btnCheckPrice.TabIndex = 152
         Me.btnCheckPrice.Text = "Check Price"
         Me.btnCheckPrice.UseVisualStyleBackColor = True
@@ -397,6 +398,7 @@ Partial Class Book
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(96, 20)
         Me.TextBox1.TabIndex = 160
+        Me.TextBox1.Visible = False
         '
         'TextBox2
         '
@@ -404,6 +406,7 @@ Partial Class Book
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(92, 20)
         Me.TextBox2.TabIndex = 161
+        Me.TextBox2.Visible = False
         '
         'Book
         '
