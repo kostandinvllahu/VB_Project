@@ -19,10 +19,11 @@ Public Class Book
     End Sub
 
     Public Sub Disp_data()
+        
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "select * from Book_tbl"
-        cmd.ExecuteNonQuery()
+        'cmd.ExecuteNonQuery()
         Dim dt As New DataTable()
         Dim da As New SqlDataAdapter(cmd)
         da.Fill(dt)
@@ -77,7 +78,6 @@ Public Class Book
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        txtID.Text = ComboBox1.SelectedIndex.ToString
         txtClient.Text = ComboBox1.Text
         'NUK E DI CA KA DASHUR TE THOT AUTORI
         '  Dim Query As String = "select  name from clients where id='" & TextBox1.Text & "'"
@@ -99,6 +99,7 @@ Public Class Book
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+        txtID.Text = ComboBox2.SelectedIndex.ToString
         txtRoom.Text = ComboBox2.Text
     End Sub
 
@@ -195,11 +196,13 @@ Public Class Book
             con.Close()
         End If
         If txtID.Text >= "" Then
+            'con.Open()
             cmd = con.CreateCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = "insert into Book_tbl values('" + txtID.Text + "','" + txtClient.Text + "','" + txtRoom.Text + "','" + TextBox2.Text + "','" + TextBox1.Text + "','" + txtDate.Text + "','" + txtParking.Text + "','" + txtTotalPrice.Text + "','" + TextBox4.Text + "')"
             cmd.ExecuteNonQuery()
             MessageBox.Show("Records are saved successfully!")
+            'con.Close()
             Clear()
             Disp_data()
         End If

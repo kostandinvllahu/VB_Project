@@ -41,6 +41,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(54, 97)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 13)
@@ -58,6 +59,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(54, 168)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 13)
@@ -76,6 +78,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Perpetua Titling MT", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(52, 57)
         Me.Label3.Name = "Label3"
@@ -85,18 +88,20 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(216, 12)
+        Me.Button1.BackColor = System.Drawing.Color.Red
+        Me.Button1.Location = New System.Drawing.Point(261, 12)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(30, 23)
         Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Exit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "X"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(304, 311)
+        Me.BackgroundImage = Global.Restaurant.My.Resources.Resources.login
+        Me.ClientSize = New System.Drawing.Size(312, 320)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnLogin)

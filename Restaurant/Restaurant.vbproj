@@ -209,5 +209,14 @@
   <ItemGroup>
     <None Include="Resources\clients-icon-png-1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kryqi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

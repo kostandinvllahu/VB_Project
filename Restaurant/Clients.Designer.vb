@@ -55,6 +55,7 @@ Partial Class Clients
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(242, 9)
         Me.Label1.Name = "Label1"
@@ -65,6 +66,7 @@ Partial Class Clients
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(504, 9)
         Me.Label2.Name = "Label2"
@@ -120,6 +122,7 @@ Partial Class Clients
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(12, 88)
         Me.Label3.Name = "Label3"
@@ -130,6 +133,7 @@ Partial Class Clients
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(12, 135)
         Me.Label4.Name = "Label4"
@@ -140,6 +144,7 @@ Partial Class Clients
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(12, 185)
         Me.Label5.Name = "Label5"
@@ -150,6 +155,7 @@ Partial Class Clients
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(9, 233)
         Me.Label6.Name = "Label6"
@@ -160,6 +166,7 @@ Partial Class Clients
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(12, 280)
         Me.Label7.Name = "Label7"
@@ -170,8 +177,9 @@ Partial Class Clients
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(8, 325)
+        Me.Label8.Location = New System.Drawing.Point(9, 325)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(69, 19)
         Me.Label8.TabIndex = 13
@@ -249,13 +257,14 @@ Partial Class Clients
         '
         'Guna2ImageButton1
         '
+        Me.Guna2ImageButton1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2ImageButton1.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton1.CheckedState.Parent = Me.Guna2ImageButton1
         Me.Guna2ImageButton1.HoverState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton1.HoverState.Parent = Me.Guna2ImageButton1
         Me.Guna2ImageButton1.Image = Global.Restaurant.My.Resources.Resources.refresh
         Me.Guna2ImageButton1.ImageRotate = 0!
-        Me.Guna2ImageButton1.Location = New System.Drawing.Point(617, 49)
+        Me.Guna2ImageButton1.Location = New System.Drawing.Point(617, 46)
         Me.Guna2ImageButton1.Name = "Guna2ImageButton1"
         Me.Guna2ImageButton1.PressedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton1.PressedState.Parent = Me.Guna2ImageButton1
@@ -274,6 +283,7 @@ Partial Class Clients
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(162, 81)
         Me.Label9.Name = "Label9"
@@ -292,6 +302,7 @@ Partial Class Clients
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Restaurant.My.Resources.Resources.bg1
         Me.ClientSize = New System.Drawing.Size(800, 491)
         Me.Controls.Add(Me.Guna2ImageButton1)
         Me.Controls.Add(Me.Button7)
