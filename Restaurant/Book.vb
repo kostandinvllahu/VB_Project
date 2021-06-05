@@ -44,6 +44,40 @@ Public Class Book
         TextBox7.Text = ""
     End Sub
 
+    Public Sub updateroomstate()
+        'BEJ BOOKED KETU
+
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        con.Open()
+        Dim check As String = "Booked"
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "update Room set roomstate='" + check + "'where id=" + txtID.Text + ""
+        cmd.ExecuteNonQuery()
+        MessageBox.Show("Records are updated successfully!")
+        fillClientcombo()
+        'Clear()
+        'Disp_data()
+
+    End Sub
+
+    Public Sub updateroomdelete()
+        'BEJ AVAILABLE KETU
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        con.Open()
+        Dim check As String = "Available"
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "update Room set roomstate='" + check + "'where id=" + txtID.Text + ""
+        cmd.ExecuteNonQuery()
+        MessageBox.Show("Records are updated successfully!")
+        fillClientcombo()
+    End Sub
+
     Public Sub fillRoomcombo()
         Dim RoomBook As String = "Available"
         Dim cmd As New SqlCommand("select id, roomtype from Room where roomstate='" + RoomBook + "'", con)
@@ -196,13 +230,12 @@ Public Class Book
             con.Close()
         End If
         If txtID.Text >= "" Then
-            'con.Open()
             cmd = con.CreateCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = "insert into Book_tbl values('" + txtID.Text + "','" + txtClient.Text + "','" + txtRoom.Text + "','" + TextBox2.Text + "','" + TextBox1.Text + "','" + txtDate.Text + "','" + txtParking.Text + "','" + txtTotalPrice.Text + "','" + TextBox4.Text + "')"
             cmd.ExecuteNonQuery()
             MessageBox.Show("Records are saved successfully!")
-            'con.Close()
+            updateroomstate()
             Clear()
             Disp_data()
         End If
@@ -273,6 +306,7 @@ Public Class Book
         cmd.CommandText = "Delete from Book_tbl where id='" + txtID.Text + "'"
         cmd.ExecuteNonQuery()
         MessageBox.Show("Booking are deleted successfully!")
+        updateroomdelete()
         History()
         con.Close()
     End Sub
