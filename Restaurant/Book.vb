@@ -19,7 +19,7 @@ Public Class Book
     End Sub
 
     Public Sub Disp_data()
-        
+
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "select * from Book_tbl"
@@ -57,7 +57,7 @@ Public Class Book
         cmd.CommandText = "update Room set roomstate='" + check + "'where id=" + txtID.Text + ""
         cmd.ExecuteNonQuery()
         MessageBox.Show("Records are updated successfully!")
-        fillClientcombo()
+        fillRoomcombo()
         'Clear()
         'Disp_data()
 
@@ -75,7 +75,7 @@ Public Class Book
         cmd.CommandText = "update Room set roomstate='" + check + "'where id=" + txtID.Text + ""
         cmd.ExecuteNonQuery()
         MessageBox.Show("Records are updated successfully!")
-        fillClientcombo()
+        fillRoomcombo()
     End Sub
 
     Public Sub fillRoomcombo()

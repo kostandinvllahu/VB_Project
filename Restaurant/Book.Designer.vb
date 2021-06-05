@@ -433,7 +433,7 @@ Partial Class Book
         Me.Guna2ImageButton1.HoverState.Parent = Me.Guna2ImageButton1
         Me.Guna2ImageButton1.Image = Global.Restaurant.My.Resources.Resources.refresh
         Me.Guna2ImageButton1.ImageRotate = 0!
-        Me.Guna2ImageButton1.Location = New System.Drawing.Point(787, 12)
+        Me.Guna2ImageButton1.Location = New System.Drawing.Point(826, 10)
         Me.Guna2ImageButton1.Name = "Guna2ImageButton1"
         Me.Guna2ImageButton1.PressedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton1.PressedState.Parent = Me.Guna2ImageButton1
